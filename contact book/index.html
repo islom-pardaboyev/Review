@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+</head>
+<body class="px-[2rem] bg-[#FAFAFA] mt-[1rem] text-[black]">
+
+    <h1 class="bg-[#3A4248] text-center p-3 font-medium text-[white] mb-[2rem] text-[2rem]">Contact Book</h1>
+    
+    <div class="grid grid-cols-12 px-[5rem] gap-[4rem]">
+        <div class="col-span-6">
+            <form class="flex flex-col form gap-y-[1rem]">
+                <h2 class="text-[2rem] text-[black] font-medium">New Contact Form</h2>
+                <input class="border-2 text-[black] p-[6px] inputName rounded-md" type="text" placeholder="Name">
+                <input class="border-2 text-[black] p-[6px] inputRelationship rounded-md" type="text" placeholder="Relationship">
+                <input class="border-2 text-[black] p-[6px] inputPhone rounded-md" type="text" placeholder="Phone">
+                <button class="bg-[#0086FE] text-[white] p-[6px] rounded-md" type="submit">Add Contact</button>
+            </form>
+        </div>
+        <div class="col-span-6">
+            <h2 class="text-[2rem] mb-[1rem] text-[black] font-medium">New Contact</h2>
+            <div class="text-[black] rounded-md border p-6 bg-[white]">
+                <p class="font-medium resultName mb-[10px] text-[1.5rem]"></p>
+                <p class="text-[#748497] resultRelationship mb-[10px]"></p>
+                <p class='text-[#0086FF] resultPhone'></p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- JS Link -->
+    <script src="/contact book/index.js"></script>
+</body>
+</html>
