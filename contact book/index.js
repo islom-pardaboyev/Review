@@ -7,21 +7,48 @@ const elResultName = document.querySelector(".resultName");
 const elResultRelationship = document.querySelector('.resultRelationship');
 const elResultPhone = document.querySelector(".resultPhone");
 
+window.onbeforeunload = () => {
+    // Do not remove the 'inputObj' from localStorage
+    console.log('Page is refreshing');
+}
+
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    function inputobj() {
+        const infoObj = {
+            name: elInputName.value,
+            relationship: elRelationship.value,
+            phone: elInputPhone.value
+        }
+
+        elResultName.textContent = infoObj.name;
+        elResultRelationship.textContent = infoObj.relationship;
+        elResultPhone.textContent = infoObj.phone;
+    }
+
+    inputobj();
+
+    display();
+    load();
+});
+
+function display() {
     const infoObj = {
         name: elInputName.value,
         relationship: elRelationship.value,
         phone: elInputPhone.value
     }
 
-    elResultName.textContent = infoObj.name;
-    elResultRelationship.textContent = infoObj.relationship;
-    elResultPhone.textContent = infoObj.phone;
+    localStorage.setItem('inputObj', JSON.stringify(infoObj));
+}
 
-    
-    elInputName.value = '';
-    elRelationship.value = '';
-    elInputPhone.value = '';
-});
+function load() {
+    const inputObj = localStorage.getItem('inputObj');
+    if (inputObj) {
+        const savedInfoObj = JSON.parse(inputObj);
+        elResultName.textContent = savedInfoObj.name;
+        elResultRelationship.textContent = savedInfoObj.relationship;
+        elResultPhone.textContent = savedInfoObj.phone;
+    }
+}
