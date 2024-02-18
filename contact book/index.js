@@ -8,7 +8,6 @@ const elResultRelationship = document.querySelector('.resultRelationship');
 const elResultPhone = document.querySelector(".resultPhone");
 
 window.onbeforeunload = () => {
-    // Do not remove the 'inputObj' from localStorage
     console.log('Page is refreshing');
 }
 
