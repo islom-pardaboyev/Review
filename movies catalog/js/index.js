@@ -27,17 +27,33 @@ for(let film of films){
     const newMoviesTitle = document.createElement('p') 
     const newYearP = document.createElement('p')
     const newScore = document.createElement('p')
+    const newYearDiv = document.createElement('div')
+    const newScoreDiv = document.createElement('div')
+    const eventsDiv = document.createElement('div')
+    const newBtnTrailer = document.createElement('button')
+    const newBtnMoreInfo = document.createElement('button')
+    const newBtnBookmark = document.createElement('button')
+
 
     newMoviesTitle.textContent = `${film.title}`
     newYearP.textContent = `${film.year}`
     newScore.textContent = `${film.score}`
+    newBtnTrailer.textContent = `Watch Trailer`
+    newBtnMoreInfo.textContent = `More Info`
+    newBtnBookmark.textContent = `Bookmark`
 
-    newImg.setAttribute('class', 'w-[450px]')
+    newImg.setAttribute('class', 'w-[500px]')
     newImg.setAttribute('src', `${film.poster}`)
+    eventsDiv.setAttribute('class', 'flex items-center justify-between')
+    newDiv.setAttribute('class', 'p-3')
 
     newUl.appendChild(newLi)
-    newLi.append(newImg, newMoviesTitle, newDiv)
-    newDiv.append(newYearP, newScore)
+    newLi.append(newImg, newDiv)
+    newDiv.append(newMoviesTitle, newYearDiv, newScoreDiv, eventsDiv)
+    newYearDiv.append(newYearP)
+    newScoreDiv.append(newScore)
+    eventsDiv.append(newBtnTrailer, newBtnMoreInfo, newBtnBookmark)
+
 }
 
 newTotalP.setAttribute('class', 'mb-[5px]')
