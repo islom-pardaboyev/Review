@@ -3,14 +3,12 @@ const elDivOne = document.querySelector(".firstdiv")
 const elDivTwo = document.querySelector(".seconddiv")
 
 
-const newInfoP = document.createElement('p')
 const newTotalP = document.createElement('p')
 const newPText = document.createElement('p')
 const newUl = document.createElement('ul')
 
 
 elTitle.textContent = 'Movies Catalog'
-newInfoP.textContent = 'Bookmark Movies'
 newTotalP.textContent = `Search results: ${films.length}`
 newPText.textContent = 'Use the form on the left to search for a movie'
 
@@ -18,7 +16,6 @@ newPText.textContent = 'Use the form on the left to search for a movie'
 
 elDivTwo.append(newTotalP, newPText, newUl)
 
-newInfoP.setAttribute('class', 'font-bold text-[2rem]')
 newUl.setAttribute('class', 'flex gap-4 w-[500px] flex-wrap')
 
 
@@ -60,10 +57,10 @@ for(let film of films){
         newBtnRemove.textContent = `Remove`
         
         console.log(newPTitle);
-        elDivOne.append(newInfoP, newLiDiv)
+        elDivOne.append(newLiDiv)
         newLiDiv.append(newPTitle, newBtnRemove)
 
-        newLiDiv.setAttribute('class', 'border-2 px-[1rem] py-[1rem] rounded-md')
+        newLiDiv.setAttribute('class', 'border-2 my-[10px] px-[1rem] py-[1rem] rounded-md')
         newPTitle.setAttribute('class', 'font-medium text-[1.3rem] mb-[1rem]')
         newBtnRemove.setAttribute('class', 'bg-[#dc2626] p-2 text-[white] text-[1.1rem] rounded-md')
     })

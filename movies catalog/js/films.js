@@ -34,4 +34,11 @@ let films = [
     poster: 'https://i.ytimg.com/vi/AmViw4JwQrw/maxresdefault.jpg',
     year: 2024,
     score: `Not Yet`
+},
+{
+    title: `Openheimer`,
+    poster: 'https://i.ytimg.com/vi/qbrTGj_-dmI/maxresdefault.jpg',
+    year: 2023,
+    score: 8.9
+
 }]
