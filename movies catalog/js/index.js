@@ -19,7 +19,7 @@ newPText.textContent = 'Use the form on the left to search for a movie'
 elDivTwo.append(newTotalP, newPText, newUl)
 
 newInfoP.setAttribute('class', 'font-bold text-[2rem]')
-newUl.setAttribute('class', 'flex gap-4')
+newUl.setAttribute('class', 'flex gap-4 w-[500px] flex-wrap')
 
 
 for(let film of films){
@@ -56,7 +56,7 @@ for(let film of films){
         const newBtnRemove = document.createElement('button')
 
         
-        newPTitle.textContent = `${film.title}`
+        newPTitle.textContent = `Movie: ${film.title}`
         newBtnRemove.textContent = `Remove`
         
         console.log(newPTitle);
@@ -70,7 +70,7 @@ for(let film of films){
 
 
 
-    newImg.setAttribute('class', 'w-[500px] rounded-md')
+    newImg.setAttribute('class', 'rounded-md')
     newImg.setAttribute('src', `${film.poster}`)
     newMoviesTitle.setAttribute('class', 'my-[.5rem] font-bold text-[1.5rem]')
     newLi.setAttribute('class', 'border rounded-md border-[#52525b]')
@@ -79,9 +79,9 @@ for(let film of films){
     newBtnTrailer.setAttribute('class', 'p-2 border-2 hover:text-[white] hover:bg-[#0ea5e9] duration-200 font-medium text-[#0ea5e9] border-[#0ea5e9] rounded-md')
     newBtnMoreInfo.setAttribute('class', 'p-2 border-2 hover:text-[white] hover:bg-[#0284c7] duration-200 font-medium text-[#0284c7] border-[#0284c7] rounded-md')
     newBtnBookmark.setAttribute('class', 'p-2 border-2 hover:text-[white] hover:bg-[#22c55e] duration-200 font-medium text-[#22c55e] border-[#22c55e] rounded-md')
-    newCalendarI.setAttribute('class', 'bx bxs-calendar')
+    newCalendarI.setAttribute('class', 'bx bxs-calendar mr-[5px]')
     newYearDiv.setAttribute('class', 'flex items-center')
-    newStarI.setAttribute('class', 'bx bxs-star text-[#fde047]')
+    newStarI.setAttribute('class', 'bx bxs-star text-[#fde047] mr-[5px]')
     newScoreDiv.setAttribute('class', 'flex items-center my-[.5rem]')
 
     newUl.appendChild(newLi)
