@@ -51,12 +51,21 @@ for(let film of films){
     newBtnBookmark.addEventListener('click', (e) => {
         e.preventDefault(e)
 
-        const newPTitle = document.createElement('li')
+        const newPTitle = document.createElement('p')
+        const newLiDiv = document.createElement('div')
+        const newBtnRemove = document.createElement('button')
 
         
         newPTitle.textContent = `${film.title}`
+        newBtnRemove.textContent = `Remove`
         
         console.log(newPTitle);
+        elDivOne.append(newInfoP, newLiDiv)
+        newLiDiv.append(newPTitle, newBtnRemove)
+
+        newLiDiv.setAttribute('class', 'border-2 px-[1rem] py-[1rem] rounded-md')
+        newPTitle.setAttribute('class', 'font-medium text-[1.3rem] mb-[1rem]')
+        newBtnRemove.setAttribute('class', 'bg-[#dc2626] p-2 text-[white] text-[1.1rem] rounded-md')
     })
 
 
@@ -84,7 +93,7 @@ for(let film of films){
 
 }
 
-elDivOne.append(newInfoP)
+
 newTotalP.setAttribute('class', 'mb-[5px]')
 newPText.setAttribute('class', 'bg-[#D5E8EE] mb-[10px] text-[#59767A] border border-[#59767A] p-3 rounded-md')
 
