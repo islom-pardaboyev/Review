@@ -41,4 +41,10 @@ let films = [
     year: 2023,
     score: 8.9
 
+}, 
+{
+    title: 'Deadpool 3',
+    poster: 'https://i.ytimg.com/vi/gICSFv_aznU/maxresdefault.jpg',
+    year: 2024,
+    score: `Not Yet`
 }]
