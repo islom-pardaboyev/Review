@@ -93,5 +93,3 @@ for(let film of films){
 
 newTotalP.setAttribute('class', 'mb-[5px]')
 newPText.setAttribute('class', 'bg-[#D5E8EE] mb-[10px] text-[#59767A] border border-[#59767A] p-3 rounded-md')
-
-

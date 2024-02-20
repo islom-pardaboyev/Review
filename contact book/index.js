@@ -14,7 +14,7 @@ window.onbeforeunload = () => {
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    function inputobj() {
+    function inputObj() {
         const infoObj = {
             name: elInputName.value,
             relationship: elRelationship.value,
@@ -26,7 +26,7 @@ elForm.addEventListener('submit', (e) => {
         elResultPhone.textContent = infoObj.phone;
     }
 
-    inputobj();
+    inputObj();
 
     display();
     load();
